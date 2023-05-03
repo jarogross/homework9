@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/8d2b93b247.js" crossorigin="anonymous"></script>
+    
+    <style>
+
+nav{  
+            background-image: url(./banner.png);
+            margin: 1%;
+           
+            font-size: 30px;
+            font-family: 'Anuphan', sans-serif;
+            display: flex;
+          flex-direction: column;
+        justify-content: center;
+    }
+    ul {
+            color: rgb(252, 250, 250);
+            display: flex;
+            margin: 1%;
+            
+        }
+    li{
+            margin: 10px;
+            background-color: rgb(74, 42, 29);
+            width: fit-content;
+            border-radius: 5px;
+            }
+
+            a:hover{
+            color: rgb(5, 253, 5);}
+            
+        body{
+            background-color: white;
+        }
+
+        form{
+            background-color: rgb(252, 250, 250);
+            width: 30%;
+            margin: auto;
+            color: black;
+            padding: 20px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            box-shadow:  0 0 10px rgb(85, 85, 88);
+
+        }
+
+        input,textarea{
+            width: 100%;
+            box-sizing: border-box;
+            border-radius: 0px;
+            margin-bottom: 5px;
+            padding: 10px;
+            border: solid 1px; color: darkgrey;
+            color: black;
+        
+
+        }
+        input:focus{
+            background-color: white;
+            outline: none;
+
+        }
+        #submit{
+            background-color: green;
+            color: white;
+        }
+        fieldset{
+            border: solid 1px; color: rgb(63, 61, 61);
+        }
+        .div1{
+            margin-top: 10px;
+        }
+        #sprava{
+            resize: none;
+        }
+      
+.container{
+  
+    
+    height: 180px;
+    width: 180px;
+    background-color: white;
+   margin: auto;
+   margin-top: 1%;
+    position: relative; 
+    animation-name: example;
+  animation-duration: 8s;
+  animation-delay: 2s;
+}
+@keyframes example {
+  0% {left:0px; }
+  25%{left: 100px;}
+  50%{left: -200px;}
+  75%{left: 100px;}
+  100%{ left:0px; }
+
+}
+        .sq1{
+            height: 100px;
+            width: 100px;
+            border: 10px;
+            border-style: solid;
+            border-color: red;
+            position: absolute;
+            top: 0px;
+            left: 35px;
+            z-index: 4;
+            
+        }
+        .sq2{
+            height: 100px;
+            width: 100px;
+            border: 10px;
+            border-style: solid;
+            border-color: blue;
+            position: absolute;
+            top: 60px;
+            left: 35px;
+            z-index: 3;
+        }
+        .sq3{
+            height: 100px;
+            width: 100px;
+            border: 10px;
+            border-style: solid;
+            border-color: green;
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            z-index: 1;
+            
+        }
+        .sq4{
+            height: 100px;
+            width: 100px;
+            border: 10px;
+            border-style: solid;
+            border-color: orange;
+            position: absolute;
+            top: 60px;
+            right: 0px;
+            z-index: 2;
+            
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul class="fa-ul">
+        <li><i class="fa-solid fa-house"></i><a href="index.html"><strong>Domov</strong></a></li>
+        <li><i class="fa-sharp fa-solid fa-bars"></i><a href="rebricek.html"><strong>Rebríček filmov</strong></a></li>
+        <li><i class="fa-sharp fa-solid fa-receipt"></i><a href="add-review.html"><strong>Pridať recenziu</strong></a></li>
+        </ul>
+    </nav>
+
+
+    <form action="index.html" method="get" target="_parent" >
+        <h1>Hodnotenie</h1>
+        <p>Pre hodnotenie filmu vypňte nasledujúce polia</p>
+        <fieldset class="fieldset">
+      <legend>Základné údaje</legend>
+      <label for="meno"> Meno:</label>
+        <input type="text" name= Meno/nick id="meno" placeholder="Meno">
+        <label for="email"> Email:</label>
+        <input type="email" name= email id=email placeholder="Email" required>
+        <label for="date"> Dátum:</label>
+        <input type="date" id= "date">
+        
+                </fieldset>
+
+        <fieldset class="fieldset">
+            <legend>Hodnotenie filmu</legend>
+            <label for="nazov"> Názov filmu:</label>
+        <input type="text" name= nazovfilmu required placeholder="Názov filmu" id="nazov">
+        <select name="zaner" id="zaner">
+            <option value="komedia">Komédia</option>
+            <option value="dráma">Dráma</option>
+            <option value="dokument">Dokument</option>
+            <option value="scifi">Scifi</option>
+        </select>
+        <div class="div1">
+            <label for="range">Hodnotenie od 0 do 100:</label>
+        </div>
+        
+        <input type="range" name=hodnotenie min="0" max= "100" step="10" value="50" id="range">
+        <textarea name="sprava" id="sprava" cols="30" rows="10" placeholder="Sem napíš slovné hodnotenie"></textarea>
+         </fieldset>
+        <input type="submit" value="Odoslať" id="submit">
+
+    
+    </form>
+
+    <div class="container">
+        <div class="sq1"> </div>
+        <div class="sq2"> </div>
+        <div class="sq3"> </div>
+        <div class="sq4"> </div>
+
+       </div>
+</body>
+</html>
